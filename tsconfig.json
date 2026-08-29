@@ -1,0 +1,50 @@
+{
+  "include": [
+    "src/**/*",
+    "tests/**/*"
+  ],
+  // Visit https://aka.ms/tsconfig to learn more about this file
+  "compilerOptions": {
+    // File Layout
+    // rootDir eksplisit "." (= default baru TS 6.0, rootDir tak lagi
+    // di-infer dari common source dir "./src"). "./src" akan TS6059
+    // begitu tests/**/* mulai terisi file.
+    "rootDir": "./",
+    "outDir": "dist/",
+    // Environment Settings
+    "module": "nodenext",
+    "moduleResolution": "NodeNext",
+    "target": "esnext",
+    "types": [
+      "jest"
+    ],
+    // Other Outputs
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+    // Stricter Typechecking Options
+    // noUncheckedIndexedAccess & exactOptionalPropertyTypes DIMATIKAN sengaja,
+    // mewarisi keputusan kelas Dasar (repo ../belajar-type-script-dasar):
+    // flag ekstra-strict membuat materi dasar menyimpang dari PDF.
+    // strict: true tetap NYALA (standar kelas ini).
+    // "noUncheckedIndexedAccess": true,
+    // "exactOptionalPropertyTypes": true,
+    // Style Options
+    // "noImplicitReturns": true,
+    // "noImplicitOverride": true,
+    // "noUnusedLocals": true,
+    // "noUnusedParameters": true,
+    // "noFallthroughCasesInSwitch": true,
+    // "noPropertyAccessFromIndexSignature": true,
+    // Recommended Options
+    "strict": true,
+    "jsx": "react-jsx",
+    "verbatimModuleSyntax": true,
+    "isolatedModules": true,
+    "noUncheckedSideEffectImports": true,
+    "moduleDetection": "force",
+    "skipLibCheck": true,
+    "allowImportingTsExtensions": true,
+    "emitDeclarationOnly": true
+  }
+}
