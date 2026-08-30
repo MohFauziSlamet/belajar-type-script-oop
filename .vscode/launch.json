@@ -1,0 +1,18 @@
+{
+    // Konfigurasi tombol Run/Debug VS Code untuk project TypeScript ini.
+    // Tanpa file ini, tombol play menjalankan `node` biasa → error
+    // "Unknown file extension .tsx" karena Node tidak mengerti TypeScript.
+    // Di sini kita arahkan ke `npx tsx` (penerjemah TS → JS sebelum dijalankan).
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "tsx: jalankan file aktif",
+            "runtimeExecutable": "npx",
+            "runtimeArgs": ["tsx", "${file}"],
+            "console": "integratedTerminal",
+            "skipFiles": ["<node_internals>/**"]
+        }
+    ]
+}

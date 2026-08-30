@@ -14,7 +14,8 @@
 // ini fokus ke BENTUK, bukan filosofi. Ringkasnya: class adalah
 // cetak biru yang memadukan DATA (field/property) dan PERILAKU
 // (method) jadi satu wadah; `new` mencetak objek nyata dari
-// cetak biru itu.
+// cetak biru itu — dan satu class boleh mencetak objek
+// SEBANYAK-BANYAKNYA tanpa batas (hlm. 8).
 //
 // Jika di Dart seperti ini:
 //     class Pelanggan {
@@ -56,7 +57,7 @@ class Pelanggan {
 const p = new Pelanggan();
 p.nama = "Eko";                 // nilai default ditimpa dari luar
 console.log(p.sapa());          // Halo, saya Eko (reguler)
-console.log(new Pelanggan().nama);    // (string kosong)
+console.log(new Pelanggan().nama);    // objek ke-2 dari class sama → "" (kosong)
 
 // ------------------------------------------------------------------
 // (2) METHOD DAN this — SAMA PERSIS SEPERTI DART
@@ -163,7 +164,8 @@ console.log(t.label);           // nanti
 // RANGKUMAN
 // ==================================================================
 // 1. class = cetak biru (field data + method perilaku); new =
-//    mencetak objek. Di TS `new` WAJIB — Dart boleh membuangnya.
+//    mencetak objek — satu class boleh cetak objek tanpa batas.
+//    Di TS `new` WAJIB — Dart boleh membuangnya.
 // 2. Field bertipe ditulis `nama: string` — bentuk deklarasinya
 //    seperti variabel biasa di dalam class, nilai default sama
 //    seperti Dart: `jenis: string = "reguler"`.

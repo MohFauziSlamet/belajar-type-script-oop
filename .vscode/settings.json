@@ -1,0 +1,17 @@
+{
+    // Konfigurasi Code Runner untuk tombol play di pojok kanan atas editor.
+    // Tanpa map ini, Code Runner menolak file .tsx dengan error
+    // "Code language not supported or defined" karena bahasanya
+    // ("typescriptreact") tidak ada di daftar perintahnya.
+    //
+    // $fullFileName = path absolut file yang sedang aktif.
+    "code-runner.executorMap": {
+        "typescriptreact": "npx tsx $fullFileName",
+        "typescript": "npx tsx $fullFileName"
+    },
+    // Jalankan di integrated terminal (bukan panel Output) supaya
+    // npx, PATH, dan warna output berperilaku normal.
+    "code-runner.runInTerminal": true,
+    // Hapus output lama sebelum run berikutnya.
+    "code-runner.clearPreviousOutput": true
+}
