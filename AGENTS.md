@@ -62,26 +62,54 @@ Programming.pdf` (96 halaman). Bahasa komunikasi utama: **Bahasa Indonesia**.
 Legenda: [x] selesai · [ ] belum. Setup project (hlm. 12-18) DILEWATI.
 
 - [x] Pengenalan OOP & Class — OOP/objek/class, OOP di TS, `class`/`new`/field bertipe/default, method+`this`, TS2564+TS2663 (hlm. 5-11, 19-21) → `src/1_pengenalan_oop.tsx`
-- [ ] Constructor (hlm. 22-24)
-- [ ] Properties & Default Value (hlm. 25-29)
-- [ ] Method — lebih dalam (hlm. 30-32; dasar method+this sudah di file 1)
-- [ ] Getter dan Setter — `get`/`set` accessor (hlm. 33-35)
-- [ ] Inheritance — `extends` (hlm. 36-38)
-- [ ] Interface Inheritance & `implements` (hlm. 39-42)
-- [ ] Super Constructor (hlm. 43-45)
-- [ ] Method Overriding (hlm. 46-48)
-- [ ] Super Method (hlm. 49-51)
-- [ ] Visibility — `public`/`private`/`protected` (+ catatan Dart: underscore `_`) (hlm. 52-56)
-- [ ] Parameter Properties — `constructor(private nama: string)` (hlm. 57-59)
-- [ ] Operator `instanceof` (+ `typeof` tak cukup utk objek; structural vs nominal) (hlm. 60-63)
-- [ ] Polymorphism — class/method polymorphism (hlm. 64-69)
-- [ ] Type Cast — `as` pada class, salah-cast (hlm. 70-74)
-- [ ] Abstract Class (hlm. 75-78)
-- [ ] Static — properties & method (+ perlu diingat) (hlm. 79-83)
-- [ ] Class Relationship (hlm. 84-86)
-- [ ] Error Handling — `extends Error`, try-catch (hlm. 87-90)
-- [ ] Namespace (hlm. 91-94)
+- [x] Constructor (hlm. 22-24) → `src/2_constructor.tsx`
+- [x] Properties & Default Value (hlm. 25-29) → `src/3_properties.tsx`
+- [x] Method — lebih dalam (hlm. 30-32; dasar method+this sudah di file 1) → `src/4_method.tsx`
+- [x] Getter dan Setter — `get`/`set` accessor (hlm. 33-35) → `src/5_getter_setter.tsx`
+- [x] Inheritance — `extends` (hlm. 36-38) → `src/6_inheritance.tsx`
+- [x] Interface Inheritance & `implements` (hlm. 39-42) → `src/7_interface.tsx`
+- [x] Super Constructor (hlm. 43-45) → `src/8_super_constructor.tsx`
+- [x] Method Overriding (hlm. 46-48) → `src/9_method_overriding.tsx`
+- [x] Super Method (hlm. 49-51) → `src/10_super_method.tsx`
+- [x] Visibility — `public`/`private`/`protected` (+ catatan Dart: underscore `_`) (hlm. 52-56) → `src/11_visibility.tsx`
+- [x] Parameter Properties — `constructor(private nama: string)` (hlm. 57-59) → `src/12_parameter_properties.tsx`
+- [x] Operator `instanceof` (+ `typeof` tak cukup utk objek; structural vs nominal) (hlm. 60-63) → `src/13_instanceof.tsx`
+- [x] Polymorphism — class/method polymorphism (hlm. 64-69) → `src/14_polymorphism.tsx`
+- [x] Type Cast — `as` pada class, salah-cast (hlm. 70-74) → `src/15_type_cast.tsx`
+- [x] Abstract Class (hlm. 75-78) → `src/16_abstract_class.tsx`
+- [x] Static — properties & method (+ perlu diingat) (hlm. 79-83) → `src/17_static.tsx`
+- [x] Class Relationship (hlm. 84-86) → `src/18_class_relationship.tsx`
+- [x] Error Handling — `extends Error`, try-catch (hlm. 87-90) → `src/19_error_handling.tsx`
+- [x] Namespace (hlm. 91-94) → `src/20_namespace.tsx`
 - Materi berikutnya (hlm. 95-96): Generic → Decorator (kelas lanjutan)
+
+## Latihan Review Materi
+Dibuat sesi 68 (konsep latihan repo dasar). 20 program = 4 level × 5,
+cakupan materi 1-20 lengkap (setiap materi ≥1×; e5 = integrasi).
+
+| Level | Folder | Status |
+|---|---|---|
+| Beginner (materi 1-4) | `src/latihan/beginner/b1..b5_*.tsx` | ✅ |
+| Middle (materi 5-10) | `src/latihan/middle/m1..m5_*.tsx` | ✅ |
+| Advance (materi 11-16) | `src/latihan/advance/a1..a5_*.tsx` | ✅ |
+| Expert (materi 17-20 + integrasi) | `src/latihan/expert/e1..e5_*.tsx` | ✅ |
+
+Konvensi file latihan (penyimpangan sadar dari file materi):
+- Nama `<level><nomor>_<nama>.tsx` (bukan `NN_`); identifier class/method
+  Indonesia seperti file materi; TANPA trailer "Cara menjalankan".
+- Struktur 4 blok: banner 3 baris (JUDUL + MATERI: n) → SOAL
+  (wajib ada sub-soal "RAMAL DULU", tanpa membocorkan jawaban) →
+  JAWABAN (define-then-print; tiap console.log berprediksi jujur
+  hasil run nyata) → RANGKUMAN tepat 3 poin.
+- No-lompat: hanya materi 1-20 + fondasi repo dasar; DILARANG
+  Generic/Decorator/async/map-filter-reduce-sort/Math.random
+  (agregasi pakai loop).
+- Blok error terkomentar + `// ❌ ERROR ...` verbatim (probe tsc
+  dengan konfigurasi proyek `--strict --target esnext ...`);
+  blok RUNTIME (tsc diam + crash) PALING AKHIR file.
+- Tiap level: verifikasi (tsc + tsx per file + simulasi uncomment
+  dinamis + grep konvensi) + review 2 subagent (eksekusi &
+  struktur) + tindak lanjut semua temuan.
 
 ## Catatan Tambahan
 - Repo ini DIPISAHKAN dari `../belajar-type-script-dasar/` pada 2026-08-29
